@@ -7,13 +7,13 @@ import (
 )
 
 type HomePage struct {
-	Name string
+	Greeting string
 }
 
 func serveHomepage(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 
 	var homepage HomePage
-	homepage.Name = "Brooke"
+	homepage.Greeting = "Welcome"
 
 	tmpl := template.Must(template.ParseFiles("html/homepage.html"))
 	_ = tmpl.Execute(w, homepage)

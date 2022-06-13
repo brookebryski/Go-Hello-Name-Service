@@ -13,7 +13,7 @@ func run() {
 
 	router.GET("/", serveHomepage)
 
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":8000", router))
 }
 
 func main() {

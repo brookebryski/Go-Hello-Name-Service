@@ -12,6 +12,7 @@ func run() {
 	router.ServeFiles("/css/*filepath", http.Dir("css"))
 
 	router.GET("/", serveHomepage)
+	router.POST("/get_name", getName)
 
 	log.Fatal(http.ListenAndServe(":8000", router))
 }
